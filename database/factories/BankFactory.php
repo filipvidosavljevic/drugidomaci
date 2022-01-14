@@ -14,7 +14,11 @@ class BankFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->company,
+            'headquaters' => $this->faker->address,
+            'email' => $this->faker->companyEmail,
+            'director' => $this->faker->name,
+            "bank_category_id" => $this->faker->numberBetween(1, 5),
         ];
     }
 }

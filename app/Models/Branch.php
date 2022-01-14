@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Branch extends Model
 {
     use HasFactory;
-    protected $fillable = ['address', 'phone', 'email', 'total_employees'];
+    protected $fillable = ['address', 'phone', 'email', 'total_employees', 'bank_id'];
 
     public function bank()
     {

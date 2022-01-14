@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\BankCategory;
 use Illuminate\Database\Seeder;
 
 class BankCategorySeeder extends Seeder
@@ -13,6 +14,6 @@ class BankCategorySeeder extends Seeder
      */
     public function run()
     {
-        //
+        BankCategory::factory(5)->create();
     }
 }

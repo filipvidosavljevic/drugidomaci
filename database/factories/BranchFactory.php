@@ -14,7 +14,11 @@ class BranchFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'address' => $this->faker->address,
+            'phone' => $this->faker->phoneNumber,
+            'email' => $this->faker->companyEmail,
+            'total_employees' => $this->faker->numberBetween(3, 30),
+            "bank_id" => $this->faker->numberBetween(1, 8)
         ];
     }
 }
