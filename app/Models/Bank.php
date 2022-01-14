@@ -9,4 +9,9 @@ class Bank extends Model
 {
     use HasFactory;
     protected $fillable = ['name', 'headquaters', 'email', 'director'];
+
+    public function bankCategory()
+    {
+        return $this->belongsTo(BankCategory::class);
+    }
 }
