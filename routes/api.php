@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BranchController;
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,4 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->apiResource('brances', BranchController::class);
+Route::post('login', [LoginController::class, 'login']);
+
+Route::middleware('auth:sanctum')->post('logout', [LoginController::class, 'logout']);
+Route::middleware('auth:sanctum')->apiResource('branches', BranchController::class);
